@@ -1,38 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.userName {
+  text-align: start;
+  font-weight: 800;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.userWork {
+  font-family: 'Rubik Dirt', cursive;
+  margin-top: 30px;
+  font-size: 25px;
+}
+
+.cardData {
+  margin-top: 10px;
+  padding: 4px;
+}
+
+.colappsData {
+  margin-top: 10px;
+}
+
+.item {
+  width: 187px;
+  height: 280px;
+  margin: 0px -14px 2rem 36px;
+  padding: 0px 0px;
+  text-align: center;
+  border-radius: 4px 4px 4px 4px;
+}
+
+.avtarImg span.ant-avatar.ant-avatar-square.ant-avatar-image.css-dev-only-do-not-override-15u6b4u {
+  box-shadow: 2px 2px 26px 0px #0e0e0e;
+}
+
+.item li {
+  margin: 0;
+  text-align: start;
+}
+
+.item {
+  animation: animateBg 20s ease infinite;
+  background-image: linear-gradient(90deg, #e63357, #5b73df, #8677e9, #e63357, #eaec65);
+  background-size: 2000% 100%;
+}
+
+@keyframes animateBg {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media screen and (max-width: 500px) {
+  .item {
+    width: 187px;
+    height: 280px;
+    margin: 0px 0px 2rem -36px;
+    padding: 0px 0px;
+    text-align: center;
+    border-radius: 4px 4px 4px 4px;
   }
 }
