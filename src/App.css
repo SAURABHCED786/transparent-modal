@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Amiko&family=Arima+Madurai&family=Domine:wght@700&family=Farsan&family=Lalezar&family=Mogra&family=Rakkas&family=Rasa&family=Shrikhand&family=Suez+One&family=Yatra+One&display=swap');
+
 .App {
   text-align: center;
 }
@@ -71,4 +73,209 @@
     text-align: center;
     border-radius: 4px 4px 4px 4px;
   }
+}
+
+@keyframes sploosh {
+  0% {
+    box-shadow: 0 0 0 0px rgba(71, 189, 225, 0.7);
+    background: rgba(71, 189, 225, 0.7);
+  }
+
+  80% {
+    background: rgba(66, 166, 223, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 70px rgba(66, 166, 223, 0);
+  }
+}
+
+.customSpan::before {
+  content: "Click Me";
+  position: relative;
+  top: 20px;
+  font-size: 13px;
+  color: white;
+  font-weight: 500;
+}
+
+.customSpan {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  width: 60px;
+  height: 60px;
+  background: center;
+  border-radius: 50%;
+  animation: sploosh 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-iteration-count: infinite;
+}
+
+.customSpan:nth-child(2) {
+  animation-delay: .33s;
+  animation-duration: 2.2s;
+}
+
+@keyframes pulse-btn {
+  0% {
+    transform: scale(1);
+  }
+
+  3.3% {
+    transform: scale(1.1);
+  }
+
+  16.5% {
+    transform: scale(1);
+  }
+
+  33% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animatedText {
+  font-size: 25px;
+  font-weight: 700;
+  font-family: 'Domine';
+  text-shadow: 2px 2px 3px black;
+}
+
+/* ZoomImage magnifire */
+
+
+.image {
+  max-width: 100%;
+  cursor: none;
+}
+
+.image a {
+  cursor: none;
+}
+
+.image img {
+  max-width: 100%;
+  vertical-align: middle;
+  z-index: 1;
+}
+
+.zoom {
+  width: 18rem;
+  height: 18rem;
+  background: #fff;
+  border-radius: 4px;
+  position: absolute;
+  pointer-events: none;
+  transition: transform 0.25s ease, opacity 0s linear 0.25s, background 0.25s ease;
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: 50% 50%;
+  overflow: hidden;
+}
+
+.zoom:before {
+  content: '';
+  position: absolute;
+  margin: auto;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  display: none;
+}
+
+.zoom.show {
+  transform: scale(1);
+  opacity: 1;
+  transition: transform 0.25s ease, opacity 0s linear;
+}
+
+.zoom.loading {
+  background: transparent;
+}
+
+.zoom.loading:before {
+  display: block;
+  animation: loading 0.5s ease infinite alternate;
+}
+
+@keyframes loading {
+  0% {
+    transform: scale(0.1);
+    box-shadow: inset 0 0 0 150px rgba(0, 0, 20, 0.4);
+  }
+
+  50% {
+    transform: scale(1);
+    box-shadow: inset 0 0 0 140px rgba(50, 50, 50, 0.4);
+  }
+
+  100% {
+    box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+.zoom.loading .zoom-image {
+  opacity: 0;
+}
+
+.zoom .zoom-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: opacity 0.25s ease;
+}
+
+
+/* ZoomImage2 Magnifire */
+
+
+
+.img-zoom-container {
+  position: relative;
+  display: flex;
+}
+
+.img-zoom-lens {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  /*set the size of the lens:*/
+  width: 40px;
+  height: 40px;
+}
+
+.img-zoom-result {
+  border: 1px solid #d4d4d4;
+  position: absolute;
+  left: 300px;
+  /*match width of #myimage*/
+  /*set the size of the result div:*/
+  width: 300px;
+  height: 300px;
+}
+
+/* animation Modal */
+
+
+.shoping-card {
+  /* text-align: center; */
+  /* box-shadow: 0px 2px 8px 0px #82589f; */
+  /* margin: 10px 100px 200px 500px; */
+  /* border-radius: 15px; */
+  /* padding: 10px; */
+  width: 90px;
+}
+
+.shoping-card div div:nth-child(2) {
+  border: 2px solid #e63357 !important;
+  width: 900px !important;
+  height: 550px !important;
 }

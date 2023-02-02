@@ -1,0 +1,9 @@
+{
+  "welcome": "Bienvenue dans l'application de conversion de devises",
+  "currency": "Devise",
+  "changeTheCurrency": "Changer la devise",
+  "changeTheLanguage": "Changer la langue",
+  "Language": "Langue",
+  "currencyImage": "Image de la devise",
+  "currencyName": "Nom de la devise"
+}

@@ -9,7 +9,6 @@ function TransparentModal(admin) {
   // console.log(admin, "userData");
   const [open, setOpen] = useState(false);
   const [openCollaps, setOpenCollaps] = useState();
-  console.log(openCollaps, "collaps");
   useEffect(() => {
     AOS.init();
   });

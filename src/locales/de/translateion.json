@@ -1,0 +1,9 @@
+{
+  "welcome": "Welkom bij de valutaconversie-app",
+  "currency": "Munteenheid",
+  "changeTheCurrency": "Wijzig de valuta",
+  "changeTheLanguage": "Verander de taal",
+  "Language": "Taal",
+  "currencyImage": "Valuta afbeelding",
+  "currencyName": "Valuta naam"
+}
